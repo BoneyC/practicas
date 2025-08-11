@@ -11,7 +11,8 @@ let Verificacionexp;
 const fechaActual = new Date();
 const Añoactual = fechaActual.getFullYear();
 const Mesactual = fechaActual.getMonth()+1;
-let CCtxt="372754888804053 | 05 | 2030 | 1015";//xxxx xxxx xxxx xxx / MM / YYYY /  CVVV
+let CCtxt = "372754888804053 | 05 | 2030 | 1015";//xxxx xxxx xxxx xxx / MM / YYYY /  CVVV
+// esto lo hice como sustito a recibirlos desde el frontend 
 const CC = CCtxt.replace(/[^|\d/°_+\-]/g,'');
 //28 caracteres divisores en 18/17 20/19 25/24
 
@@ -46,7 +47,7 @@ function verificarExp(){
     Añobin = parseInt(CC.slice((20),(25)))//inicial,final excluido
     Mesbin = parseInt(CC.slice((17),(20)))
     if(Añobin > Añoactual || (Añobin == Añoactual && Mesbin > Mesactual)){
-       Verificacionexp=true;
+       Verificacionexp = true;
         general(CC,contador);
     }
     }
