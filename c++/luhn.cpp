@@ -22,9 +22,9 @@ int main(){
 
 std::string soloNum(const std::string codigo){
 std::string num=codigo;
-num.erase(
-std::remove_if(num.begin(),num.end(),[](char c){return !std::isdigit(c);}),num.end()
-);
+num.erase(//para borrar 
+std::remove_if(num.begin(),num.end(),[](char c){return !std::isdigit(c);}),num.end()//desde donde
+);                                       // hasta donde y retornar si se borra o no si "c" es NO es un numero
 return num;
 }
 
